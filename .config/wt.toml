@@ -1,0 +1,6 @@
+# worktrunk project config (skcapstone docs/fleet/WORKTRUNK.md).
+# Approved per host by `sk-wt-gc --approve`, only from a clean main checkout.
+
+# Resolve the Dart workspace in each worktree (shared lockfile, per-tree
+# .dart_tool). Background and best-effort: hosts without Flutter skip it.
+post-start = "command -v flutter >/dev/null 2>&1 && flutter pub get || true"
